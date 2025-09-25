@@ -11,6 +11,7 @@ This is the first working prototype that links interoception, prediction error, 
 - **tests/** → simple tests to validate model behavior  
 - **paper/** → draft write-up with theory, design, and results  
 - **figures/** → plots of valence/arousal from simulations  
+- **affective_agent_whitepaper.pdf** → full whitepaper with results + diagrams  
 
 ---
 
@@ -18,4 +19,4 @@ This is the first working prototype that links interoception, prediction error, 
 1. Clone or download this repository  
 2. Run a simulation:  
    ```bash
-   python scripts/simulate.py
+   python scripts/simulate.pypytest
