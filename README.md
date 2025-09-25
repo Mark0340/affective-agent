@@ -1,30 +1,28 @@
-# Affective Agent Prototype  
-**Author:** Mark Purvis  
+# Affective Agent — Pre-Human-Trials Package (v4.1)
 
-This is the first working prototype that links interoception, prediction error, and a global workspace into a testable model of **emotion & consciousness**.  
+This repository contains the **pilot-ready package** for running and validating an affective computing agent that integrates interoceptive signals (EDA, HR, Respiration) into predictive processing and global workspace dynamics.
+
+The package includes:
+- ✅ Reference agent implementation with ablation controls  
+- ✅ Synthetic physiology generator (baseline → stress → recovery)  
+- ✅ Data ingestion (CSV adapter, event/marker aligner, self-report forms)  
+- ✅ Quality control (clipping, NaN repair, flatline detection)  
+- ✅ Metrics: Shannon entropy, Lempel-Ziv complexity, Active Information Storage (AIS), HRV (RMSSD)  
+- ✅ Validation workflows (baseline, ablations, noise sweeps)  
+- ✅ Self-report & events augmentation (correlations, segment deltas, CIs & permutation tests)  
+- ✅ Reporting in Markdown (`docs/validation_summary.md`), machine-readable CSV (`docs/summary.csv`), and consolidated PDF (`docs/affective-agent_pilot_report.pdf`)  
+- ✅ Operator runbook, preregistration outline, and consent template  
 
 ---
 
-## 📦 What’s Inside
-- **src/** → core source code (`affective_agent.py`)  
-- **scripts/** → simulation scripts (threat, recovery, control comparison)  
-- **tests/** → simple tests to validate model behavior  
-- **paper/** → draft write-up with theory, design, and results  
-- **figures/** → plots of valence/arousal from simulations  
-- **affective_agent_whitepaper.pdf** → full whitepaper with results + diagrams  
+## 🚀 Quick Start
 
----
+### 1. Setup
+```bash
+git clone https://github.com/Mark0340/affective-agent.git
+cd affective-agent
 
-## 🚀 Quickstart
-1. Clone or download this repository  
-2. Run a simulation:  
-   ```bash
-   python scripts/simulate.pypytest
-## Final Validation Summary
-- ✅ Complexity metrics show rich internal dynamics (entropy > 2.5).
-- ✅ Perturbations yield correct causal signs (EDA ↑ → arousal ↑, valence ↓).
-- ✅ Ablations confirm all components contribute.
-- ✅ Baselines weaker than full model.
-- ✅ Robust to realistic noise and latency.
-
-See detailed CSVs in `experiments/` and `results/`.
+python -m venv .venv
+source .venv/bin/activate   # (Windows: .venv\Scripts\activate)
+pip install -U pip
+pip install -e .
