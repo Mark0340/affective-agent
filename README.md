@@ -20,3 +20,11 @@ This is the first working prototype that links interoception, prediction error, 
 2. Run a simulation:  
    ```bash
    python scripts/simulate.pypytest
+## Final Validation Summary
+- ✅ Complexity metrics show rich internal dynamics (entropy > 2.5).
+- ✅ Perturbations yield correct causal signs (EDA ↑ → arousal ↑, valence ↓).
+- ✅ Ablations confirm all components contribute.
+- ✅ Baselines weaker than full model.
+- ✅ Robust to realistic noise and latency.
+
+See detailed CSVs in `experiments/` and `results/`.
